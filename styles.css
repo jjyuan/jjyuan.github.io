@@ -9,13 +9,14 @@ body {
 * {
     box-sizing: border-box;
 }
-
+/*
+Main Page
+*/
 .links {
     margin: auto;
     width: 40%;
     height: 80vh;
-/*    border: 3px solid black;
-*/    padding: 10px;    
+    padding: 10px;    
     font-size: 4em;
     text-align: center;
     color: white;
@@ -31,21 +32,16 @@ body {
     -webkit-transform: translateY(-150%);
     -ms-transform: translateY(-150%);
     transform: translateY(-150%);
-    /*display: inline;
-    vertical-align: middle;
-    line-height: 760px;*/
     transition: all .5s;
 
 }
 
 #wrapper {
     width: 80%;
-    /*border: 4px solid orange;*/
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-/*    display: none;
-*/}
+}
 #proj1 {
     float: left;
     background-color: red;
@@ -58,19 +54,21 @@ body {
 #proj1:hover {
     font-size: 5em;
 }
-
 #about1:hover {
     font-size: 5em;
 
 }
+/*
+Project and About Content Pages
+*/
 #proj2 {
     width: 80%;
     height: 80vh;
     background-color: red;
     border-radius: 4em;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 10%;
+    /*transform: translateY(-50%);*/
     display: none;
     box-shadow: 10px 10px 20px #989ba7;
     color: white;
@@ -97,7 +95,6 @@ body {
 }
 .window {
     display: inline-block;
-    /*float: left;*/
     overflow: auto;
 }
 #entrycontainer{
@@ -105,13 +102,15 @@ body {
     width: 100%;
     top: 15%;
     position: absolute;
-    /*background-color: blue;*/
     border: 2px blue;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     padding: 1%;
 }
+/*
+Project Page Entries
+*/
 .entry {
     position: relative;
     height: 40%;
@@ -120,17 +119,12 @@ body {
     background-color: orange;
     flex-grow: 1;
     margin: 1%;
-    /*display: flex;*/
     vertical-align: middle;
-    /*float: left;*/
 }
 .entry:hover h3{
-    /*font-style: bold;*/
-    /*transform: translateY(-80%);*/
     font-size: 1.5em;
     
 }
-
 .window h3 {
     position: relative;
     top: 50%;
@@ -138,4 +132,16 @@ body {
     -ms-transform: translateY(-50%);
     transform: translateY(-100%);
     font-style: normal;
+}
+/*
+Individual Pages
+*/
+.page {
+    width: 80%;
+    height: 80vh;
+    top: 10%;
+    position: absolute;
+    background-color: gray;
+    display: none;
+    z-index: 1;
 }
