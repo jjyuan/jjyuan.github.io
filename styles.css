@@ -1,9 +1,14 @@
 body {
-    background-color: #87CEFA;
+    background-image: url('images/main_BG.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     font-family: 'Josefin Sans', sans-serif;
     display:flex;
     justify-content:center;
     align-items:center;
+    height: 100vh;
+    margin: 0px;
 }
 
 * {
@@ -12,9 +17,23 @@ body {
 /*
 Main Page
 */
+#header {
+    top: 0%;
+    position: absolute;
+    font-size: 2rem;
+    margin: 0px;
+    padding: 0px;
+    line-height: 50%;
+    color: white;
+    display: inline;
+    text-align: center;
+}
+#header p {
+    font-size: 2rem;
+}
 .links {
     margin: auto;
-    width: 40%;
+    width: 45%;
     height: 80vh;
     padding: 10px;    
     font-size: 4em;
@@ -23,6 +42,7 @@ Main Page
     vertical-align: middle;
     box-shadow: 10px 10px 20px #989ba7;
     border-radius: 4rem;
+
 
 }
 .links p {  
@@ -38,18 +58,21 @@ Main Page
 
 #wrapper {
     width: 80%;
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    top: 55%;
+    border: red 5px;
     transform: translateY(-50%);
 }
 #proj1 {
     float: left;
-    background-color: red;
+    background-color: rgba(123, 200, 160, 0.8);
+    /*position: absolute;*/
 }
 
 #about1 {
     float: right;
-    background-color: green;
+    background-color: rgba(123, 200, 160, 0.8);
+    /*position: absolute;*/
 }
 #proj1:hover {
     font-size: 5em;
@@ -64,15 +87,15 @@ Project and About Content Pages
 #proj2 {
     width: 80%;
     height: 80vh;
-    background-color: red;
+    background-color: rgba(123, 200, 160, 0.8);
     border-radius: 4em;
     position: absolute;
-    top: 10%;
+    top: 15%;
     /*transform: translateY(-50%);*/
     display: none;
     box-shadow: 10px 10px 20px #989ba7;
     color: white;
-    
+
 }
 .title {
     text-align: center;
@@ -85,11 +108,11 @@ Project and About Content Pages
 #about2 {
     width: 80%;
     height: 80vh;
-    background-color: green;
+    background-color: rgba(123, 200, 160, 0.8);
     border-radius: 4em;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 15%;
+    /*transform: translateY(-50%);*/
     display: none;
     box-shadow: 10px 10px 20px #989ba7;
     color: white;
@@ -142,7 +165,7 @@ Individual Pages
     height: 80vh;
     top: 10%;
     position: absolute;
-    background-color: gray;
+    background-color: white;
     display: none;
     z-index: 1;
 }
