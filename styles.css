@@ -140,7 +140,7 @@ Project Page Entries
     height: 40%;
     width: 30%;
     text-align: center;
-    background-color: orange;
+    background-color: rgba(123, 220, 180, 0.8);
     flex-grow: 1;
     margin: 1%;
     vertical-align: middle;
