@@ -2,23 +2,23 @@ $(document).ready(function(){
     $(document).click(function(event) {
         if($(event.target).is('#proj1') || $(event.target).is('#proj1 p') ){
             // console.log("hide proj1, show proj2");
-            $('#about1').animate({width: "0%"}, 500, "linear", function(){
+            $('#about1').animate({width: "0%"}, 300, "linear", function(){
                 $('#about1').css({display:"none"});
             });
 
-            $('#proj1').animate({width:"80%"}, 500, "linear", function(){
+            $('#proj1').animate({width:"80%"}, 300, "linear", function(){
                 $('#proj2').show();
                 $('.entry').hide();
-                $('.entry').fadeIn(300, "linear");
+                $('.entry').fadeIn(150, "linear");
                 $('#proj1').hide();
             });
             
         } else if ($(event.target).is('#about1') || $(event.target).is('#about1 p')){
             // console.log("hide about1, show about2");
-            $('#proj1').animate({width:"0%"}, 500, "linear", function(){
+            $('#proj1').animate({width:"0%"}, 300, "linear", function(){
                 $('#proj1').css({display:"none"});
             });
-            $('#about1').animate({width:"80%"}, 500, "linear", function(){
+            $('#about1').animate({width:"80%"}, 300, "linear", function(){
                 $('#about2').show(); 
                 $('#about1').hide();
             });
@@ -150,7 +150,7 @@ $(document).ready(function(){
             } else {
                 $('.page').fadeOut(300, "linear");
                 $('#header').fadeOut(300, "linear");
-                $('#proj2').animate({width: "95%", height: "95vh", top: "2.5%", "border-radius": "4rem"}, 
+                $('#proj2').animate({width: "95%", height: "95vh",  top: "2.5%", "border-radius": "4rem"}, 
                     300, "linear", function(){
                         $('#proj2').css({"-webkit-filter": "blur(5px)", "-moz-filter": "blur(5px)", 
                             "-o-filter": "blur(5px)", "-ms-filter": "blur(5px)", "filter": "blur(5px)"});
@@ -165,26 +165,52 @@ $(document).ready(function(){
             console.log("clicked outside proj2 and outside about2");
             if($('#proj2').is(":visible")) {
                 console.log("proj2 is visible");
-                $('#proj1').show();
-                $('#proj1').css({width:"45%"});
-                $('#about1').show();
-                $('#about1').css({width:"45%"});
-                $('#proj2').fadeOut(500,"linear", function(){
-                    $('#proj2').css({width:"80%", height:"80vh", top:"15%", "border-radius":"4em", 
-                        "-webkit-filter": "none", "-moz-filter": "none", "-o-filter": "none",
-                        "-ms-filter": "none", "filter": "none"});
+                // $('#proj1').show();
+                // $('#proj1').css({width:"45%"});
+                // $('#about1').show();
+                // $('#about1').css({width:"45%"});
+                // $('#proj2').fadeOut(500,"linear", function(){
+                //     $('#proj2').css({width:"80%", height:"80vh", top:"15%", "border-radius":"4em", 
+                //         "-webkit-filter": "none", "-moz-filter": "none", "-o-filter": "none",
+                //         "-ms-filter": "none", "filter": "none"});
+                // });
+                $('#entrycontainer').fadeOut(300, function(){
+                    $('#entrycontainer').show();
                 });
+                $('#proj2').animate({width: "45%", left: "10%"}, 200, "linear", function(){
+                    $('#proj1').css({width: "45%"});
+                    $('#proj1').show();
+                    $('#proj2').hide();
+                    $('#proj2').css({width:"80%", height:"80vh", top:"15%", left:"", "border-radius":"4em", 
+                    "-webkit-filter": "none", "-moz-filter": "none", "-o-filter": "none",
+                    "-ms-filter": "none", "filter": "none"});
+                });
+                $('#about1').show();
+                $('#about1').animate({width: "45%"}, 300, "linear");
+                
             }
             if($('#about2').is(":visible")) {
                 console.log("about2 is visible");
-                $('#about2').hide();
-                $('#about2').css({width:"80%", height:"80vh", top:"15%", "border-radius":"4em", 
+                $('#about2').animate({width: "45%", right: "10%"}, 200, "linear", function(){
+                    $('#about1').css({width: "45%"});
+                    $('#about1').show();
+                    $('#about2').hide();
+                    $('#about2').css({width:"80%", height:"80vh", top:"15%", "border-radius":"4em", 
                     "-webkit-filter": "none", "-moz-filter": "none", "-o-filter": "none",
                     "-ms-filter": "none", "filter": "none"});
-                $('#about1').show();
-                $('#about1').css({width:"45%"});
+                });
                 $('#proj1').show();
-                $('#proj1').css({width:"45%"});
+                $('#proj1').animate({width: "45%"}, 300, "linear");
+
+
+            //     $('#about2').hide();
+            //     $('#about2').css({width:"80%", height:"80vh", top:"15%", "border-radius":"4em", 
+            //         "-webkit-filter": "none", "-moz-filter": "none", "-o-filter": "none",
+            //         "-ms-filter": "none", "filter": "none"});
+            //     $('#about1').show();
+            //     $('#about1').css({width:"45%"});
+            //     $('#proj1').show();
+            //     $('#proj1').css({width:"45%"});
             }
             if($('.page').is(":visible")) {
                 console.log("page was visisble");
